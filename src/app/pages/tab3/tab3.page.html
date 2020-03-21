@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Favorites
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-slides *ngIf="localData.news.length === 0">
+		<ion-slide>
+			
+			<ion-label>Add favorites to view in this page.</ion-label>
+		</ion-slide>
+	</ion-slides>
+
+	<app-news *ngIf="localData.news.length > 0 "[news]="localData.news" [favoritePage]="true"></app-news>
+  
+</ion-content>
